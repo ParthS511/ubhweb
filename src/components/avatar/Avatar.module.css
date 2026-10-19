@@ -1,0 +1,9 @@
+.root {
+  background-color: var(--mantine-color-ubhNeutral-3);
+  border-radius: 50%;
+  color: var(--mantine-color-ubhNeutral-9);
+}
+
+.placeholder {
+  color: var(--mantine-color-ubhNeutral-6);
+}

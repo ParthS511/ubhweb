@@ -1,0 +1,115 @@
+/* FYI: If you need to change the width of this component, layout.tsx must also be updated. */
+.sideBar {
+  width: var(--sidebar-width);
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: clamp(18px, 2.4vw, var(--mantine-spacing-lg)) clamp(10px, 1.6vw, var(--mantine-spacing-md));
+	background-color: var(--mantine-color-ubhNeutral-0);
+	border-radius: 0 var(--mantine-radius-xl) var(--mantine-radius-xl) 0;
+}
+
+.header {
+  display: flex;
+  /* flex-direction: column; */
+	align-items: center;
+	gap: var(--mantine-spacing-md);
+	padding: clamp(6px, 1vw, var(--mantine-spacing-xs)) clamp(10px, 1.6vw, var(--mantine-spacing-md)) clamp(10px, 1.6vw, var(--mantine-spacing-md));
+}
+
+.header svg,
+.header img {
+	width: var(--sidebar-logo-width);
+	height: auto;
+	max-width: 100%;
+}
+
+.title {
+	font-size: var(--mantine-font-size-lg);
+	font-weight: var(--mantine-font-weight-bold);
+	color: var(--mantine-color-ubhNeutral-9);
+}
+
+.divider {
+	height: 2px;
+	background-color: var(--mantine-color-ubhNeutral-2);
+	margin: var(--mantine-spacing-xs) var(--mantine-spacing-lg);
+  border-radius: var(--mantine-radius-xs);
+}
+
+.sideBarMain {
+  padding-top: var(--mantine-spacing-sm);
+	display: flex;
+	flex-direction: column;
+	gap: var(--mantine-spacing-md);
+}
+
+.link {
+	width: 100%;
+	height: clamp(60px, 6vw, 70px);
+	display: flex;
+	align-items: center;
+	gap: var(--mantine-spacing-lg);
+	padding: clamp(10px, 1.6vw, var(--mantine-spacing-md)) clamp(14px, 2vw, var(--mantine-spacing-xl));
+	border: none;
+	border-radius: var(--mantine-radius-xl);
+	background-color: var(--mantine-color-ubhNeutral-0);
+  color: var(--mantine-color-ubhNeutral-9);
+  font-size: var(--mantine-font-size-md);
+  font-weight: var(--mantine-font-weight-semibold);
+  line-height: var(--mantine-line-height-sm);
+  cursor: pointer;
+  text-align: left;
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+
+.link:hover {
+	background-color: var(--mantine-color-ubhNeutral-2);
+	transform: translateX(var(--mantine-spacing-xxs));
+}
+
+.linkIcon {
+	flex-shrink: 0;
+}
+
+.link span {
+  flex: 1;
+}
+
+.active {
+	background-color: var(--mantine-color-ubhRed-8);
+	color: var(--mantine-color-ubhNeutral-0);
+	transform: translateX(var(--mantine-spacing-xxs));
+}
+
+.active:hover {
+	background-color: var(--mantine-color-ubhRed-8);
+}
+
+.logout {
+  margin-top: auto;
+  height: clamp(60px, 6vw, 70px);
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-lg);
+  padding: clamp(10px, 1.6vw, var(--mantine-spacing-md)) clamp(14px, 2vw, var(--mantine-spacing-xl));
+  border: none;
+  border-radius: var(--mantine-radius-lg);
+  background-color: transparent;
+  color: var(--mantine-color-ubhNeutral-9);
+  font-size: var(--mantine-font-size-md);
+  font-weight: var(--mantine-font-weight-semibold);
+  line-height: var(--mantine-line-height-sm);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.logout:hover {
+  background-color: var(--mantine-color-ubhNeutral-2);
+}

@@ -1,0 +1,85 @@
+.root {
+  border-radius: var(--mantine-radius-xs);
+}
+
+/* default variant */
+.default {
+  background-color: var(--mantine-color-ubhRed-8);
+  color: var(--mantine-color-ubhNeutral-0);
+}
+
+.default:hover {
+  background-color: var(--mantine-color-ubhRed-9);
+}
+
+.default:active {
+  background-color: var(--mantine-color-ubhRed-4);
+}
+
+/* outlined variant */
+.outlined {
+  background-color: transparent;
+  border: 1px solid var(--mantine-color-ubhRed-8);
+  color: var(--mantine-color-ubhRed-8);
+}
+
+.outlined:hover {
+  background-color: transparent;
+  border-color: var(--mantine-color-ubhRed-9);
+  color: var(--mantine-color-ubhRed-9);
+}
+
+.outlined:active {
+  background-color: transparent;
+  border-color: var(--mantine-color-ubhRed-4);
+  color: var(--mantine-color-ubhRed-4);
+}
+
+/* text variant */
+.text {
+  background-color: transparent;
+  color: var(--mantine-color-ubhRed-8);
+}
+
+.text:hover {
+  background-color: transparent;
+  color: var(--mantine-color-ubhRed-9);
+}
+
+.text:active {
+  background-color: transparent;
+  color: var(--mantine-color-ubhRed-4);
+}
+
+/* disabled — default */
+.default:disabled,
+.default[data-disabled] {
+  background-color: var(--mantine-color-ubhNeutral-4);
+  color: var(--mantine-color-ubhNeutral-0);
+  cursor: not-allowed;
+}
+
+/* disabled — outlined */
+.outlined:disabled,
+.outlined[data-disabled] {
+  background-color: transparent;
+  border-color: var(--mantine-color-ubhNeutral-4);
+  color: var(--mantine-color-ubhNeutral-4);
+  cursor: not-allowed;
+}
+
+/* disabled — text */
+.text:disabled,
+.text[data-disabled] {
+  background-color: transparent;
+  color: var(--mantine-color-ubhNeutral-4);
+  cursor: not-allowed;
+}
+
+.tooltip {
+  background-color: var(--mantine-color-ubhNeutral-8);
+  color: var(--mantine-color-ubhNeutral-0);
+  padding: 5px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
+}

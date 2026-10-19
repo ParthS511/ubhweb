@@ -1,0 +1,169 @@
+.dashboard-greeting {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  color: var(--mantine-color-ubhRed-6);
+  font-weight: var(--mantine-font-weight-semibold);
+}
+
+.dashboard-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 50px);
+}
+
+@media (max-width: 1100px) {
+  .dashboard-card-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-card-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .dashboard-card {
+    padding: 22px;
+  }
+  .dashboard-card-header {
+    grid-template-columns: 44px 56px minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+/* duplicate card so it works w jade's rn (since i am inefficiently giving each page its own card css) */
+.card {
+  min-width: 0;
+  width: 100%;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--mantine-color-ubhNeutral-0);
+  border-radius: var(--mantine-radius-sm);
+  border: 1px solid var(--mantine-color-ubhNeutral-1);
+  padding: clamp(18px, 2.4vw, 26px) clamp(20px, 3vw, 30px) clamp(16px, 2vw, 22px);
+  box-sizing: border-box;
+}
+
+.dashboard-card {
+  min-width: 0;
+  width: 100%;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--mantine-color-ubhNeutral-0);
+  border-radius: var(--mantine-radius-sm);
+  border: 1px solid var(--mantine-color-ubhNeutral-1);
+  padding: clamp(18px, 2.4vw, 26px) clamp(20px, 3vw, 30px) clamp(16px, 2vw, 22px);
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card.good,
+.dashboard-card.warning,
+.dashboard-card.critical {
+  gap: clamp(20px, 3vw, 26px);
+}
+
+.good {
+  background: var(--success-bg2);
+  border: 1px solid var(--success-border);
+}
+
+.warning {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+}
+
+.critical {
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+}
+
+.dashboard-card-header {
+  display: grid;
+  grid-template-columns: clamp(36px, 9vw, 48px) clamp(52px, 13vw, 80px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 15px);
+  padding: 0px 0px 7px;
+  min-width: 0;
+  width: 100%;
+}
+
+.dashboard-card-icon {
+  width: 50px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.dashboard-card-header h2,
+.dashboard-card-header h6 {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+.dashboard-card-header h2 {
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-card-header h6 {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: normal;
+  font-weight: var(--mantine-font-weight-semibold);
+}
+
+.dashboard-card-header h6 span {
+  display: block;
+}
+
+.dashboard-card h4 {
+  font-weight: var(--mantine-font-weight-bold);
+}
+
+.notification-filters {
+  display: flex;
+  gap: clamp(5px, 1vw, 7px);
+  flex-wrap: wrap;
+}
+
+.scroll-container {
+  flex-grow: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: clamp(6px, 1vw, 10px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1vw, 10px);
+}
+
+/* maybe a notif has a different border - ubhRed ?? */
+.dashboard-patient-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vw, 15px);
+  background: #fdf6e880;
+  border-radius: var(--mantine-radius-sm);
+  border: 1px solid var(--mantine-color-ubhNeutral-7);
+  padding: clamp(14px, 2vw, 20px) clamp(20px, 3vw, 30px);
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-patient-card h6 {
+  font-weight: var(--mantine-font-weight-semibold);
+}
+
+.dashboard-patient-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
